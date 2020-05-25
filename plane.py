@@ -47,7 +47,7 @@ def square_root(list): #Computes expressions with square roots
                 entry.delete(0,"end") #deletes whatever is in the entry
                 entry.insert(0,entry_number) #puts the value that was calculated by the function within the entry
 
-num_list = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ".", "√", "", " "] #acceptable values in the entries
+num_list = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", ".", "√", ""] #acceptable values in the entries
 def calculate():
     for a in list:
         if a.get() == "":
@@ -57,7 +57,7 @@ def calculate():
         for char in entry.get():
             if char not in num_list:
                 error_window = tkinter.Tk()
-                tkinter.Label(error_window, text="%s is not a valid character. Only numbers, decimal points, and square root symbols are valid." % char).grid(row=0, column=0)
+                tkinter.Label(error_window, text="'%s' is not a valid character. Only numbers, decimal points, and square root symbols are valid." % char).grid(row=0, column=0)
                 return False
 
 
